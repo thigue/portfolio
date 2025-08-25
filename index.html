@@ -8,65 +8,114 @@
     <script src="assets/js/main.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="#">Sobre mim</a>
-      <a href="#">Habilidades</a>
-      <a href="#">Projetos</a>
-      <a href="#">Contato</a>
-    </nav>
-    <main>
-      <section>
-        <h1>Thiago Soares</h1>
-        <p>Desenvolvedor Web</p>
+    <div class="limit-container">
+      <header>
+        <nav>
+          <a href="#inicio">INICIO</a>
+          <a href="#sobre-mim">SOBRE MIM</a>
+          <a href="#conhecimentos">CONHECIMENTOS</a>
+          <a href="#projetos">PROJETOS</a>
+          <a href="#contato">CONTATO</a>
+        </nav>
+      </header>
 
-        <button><a href="#">LinkedIn</a></button>
-        <button><a href="#">GitHub</a></button>
-        <button><a href="#">E-mail</a></button>
-      </section>
-      <section id="sobre-mim">
-        <img src="assets/img/thigue-profile.jpeg" alt="" />
-        <h2>Sobre mim</h2>
-        <p>
-          Sou Thiago Guerra Soares, entusiasta de tecnologia e desenvolvedor
-          web. Natural de Santos-SP, iniciei meu contato com a programação
-          explorando arduinos e projetos de robótica, experiência que despertou
-          minha paixão pela área.
-        </p>
-        <p>
-          Atualmente, curso graduação na FATEC Baixada Santista Rubens Lara,
-          onde venho ampliando meus conhecimentos e evoluindo constantemente
-          como profissional.
-        </p>
-        <p>
-          Além da programação, gosto de dedicar meu tempo a boas leituras e à
-          prática de esportes, que me ajudam a manter o equilíbrio e a
-          criatividade necessários para superar desafios — inclusive aqueles
-          bugs que parecem impossíveis.
-        </p>
-        <p>
-          Meu objetivo é continuar aprendendo e aprimorando minhas habilidades
-          para alcançar sempre a melhor versão de mim como desenvolvedor.
-        </p>
-      </section>
-      <section>
-        <h2>Habilidades</h2>
-        <button><a href="#">HTML</a></button>
-        <button><a href="#">CSS</a></button
-        ><button><a href="#">JavaScript</a></button>
-        <button><a href="#">Java</a></button
-        ><button><a href="#">SQL</a></button>
-      </section>
-      <section>
-        <h2>Projetos</h2>
-        <h3>To-do-list</h3>
-        <p>O projeto consiste em uma lista para organização de afazeres</p>
-        <p>Desenvolvido com: HTML, CSS e JavaScript</p>
-        <a href="#">to-do-list-project</a>
-      </section>
-      <section>
-        <h2>Contato</h2>
-        <form action="#" method="post">
-          <div class="input-group">
+      <main>
+        <section id="inicio">
+          <h1>THIAGO SOARES</h1>
+          <p>Desenvolvedor Web</p>
+          <div class="icons">
+            <a href="https://github.com/thigue"
+              ><img src="assets/img/github.png" alt="" /></a
+            ><a href="https://www.linkedin.com/in/thiago-soares-274bb2271/"
+              ><img src="assets/img/linkedin.png" alt="" /></a
+            ><a href="mailto:thigue.soares@gmail.com"
+              ><img src="assets/img/mail.png" alt=""
+            /></a>
+          </div>
+        </section>
+
+        <section id="sobre-mim">
+          <picture>
+            <img
+              src="assets/img/thigue-profile.jpg"
+              alt="Foto de Thiago Soares"
+            />
+          </picture>
+
+          <article>
+          <h2>Sobre mim</h2>
+          <p>
+            Sou Thiago Guerra Soares, entusiasta de tecnologia e desenvolvedor
+            web. Natural de Santos-SP, iniciei meu contato com a programação
+            explorando arduinos e projetos de robótica, experiência que
+            despertou minha paixão pela área.
+          </p>
+          <p>
+            Atualmente, curso graduação na FATEC Baixada Santista Rubens Lara,
+            onde venho ampliando meus conhecimentos e evoluindo constantemente
+            como profissional.
+          </p>
+          <p>
+            Além da programação, gosto de dedicar meu tempo a boas leituras e à
+            prática de esportes, que me ajudam a manter o equilíbrio e a
+            criatividade necessários para superar desafios — inclusive aqueles
+            bugs que parecem impossíveis.
+          </p>
+          <p>
+            Meu objetivo é continuar aprendendo e aprimorando minhas habilidades
+            para alcançar sempre a melhor versão de mim como desenvolvedor.
+          </p>
+        </section>
+
+        <section id="conhecimentos">
+          <h2>Conhecimentos</h2>
+
+          <figure>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt="HTML"
+              title="HTML"
+            />
+
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              alt="CSS"
+              title="CSS"
+            />
+
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript"
+              title="JavaScript"
+            />
+
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+              alt="Java"
+              title="Java"
+            />
+
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+              alt="SQL"
+              title="SQL"
+            />
+          </figure>
+        </section>
+
+        <section id="projetos">
+          <h2>Projetos</h2>
+          <article>
+            <h3>To-do-list</h3>
+            <p>O projeto consiste em uma lista para organização de afazeres</p>
+            <p>Desenvolvido com: HTML, CSS e JavaScript</p>
+            <a href="#">to-do-list-project</a>
+          </article>
+        </section>
+
+        <section id="contato">
+          <h2>Contato</h2>
+          <form action="#" method="post">
             <label for="nome"></label>
             <input
               type="text"
@@ -75,9 +124,7 @@
               placeholder="Seu nome"
               required
             />
-          </div>
 
-          <div class="input-group">
             <label for="email"></label>
             <input
               type="email"
@@ -86,9 +133,7 @@
               placeholder="Seu email"
               required
             />
-          </div>
 
-          <div class="input-group">
             <label for="mensagem"></label>
             <textarea
               id="mensagem"
@@ -97,14 +142,15 @@
               placeholder="Sua mensagem"
               required
             ></textarea>
-          </div>
 
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
-    </main>
-    <footer>
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+      </main>
+
+      <footer>
         <p>© 2025 Thiago Soares. Todos os direitos reservados.</p>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>
