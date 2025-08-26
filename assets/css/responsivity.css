@@ -1,0 +1,132 @@
+/* TELAS MENORES */
+@media (max-width: 500px) {
+  #conhecimentos figure {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 1rem;
+  }
+
+  #conhecimentos figure img {
+    width: 50px; 
+  }
+}
+
+@media (max-width: 768px) {
+  header nav {
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  /* SOBRE MIM */
+  #sobre-mim {
+    padding: 1rem;
+  }
+
+  #sobre-mim picture img {
+    width: 200px;
+  }
+
+  #sobre-mim article {
+    padding: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* CONHECIMENTOS */
+  #conhecimentos figure {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+  }
+
+  #conhecimentos figure img {
+    width: 70px;
+  }
+
+  /* PROJETOS */
+  #projetos article {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  /* CONTATO */
+  #contato {
+    width: 90%;
+    height: auto; 
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+
+  #contato p {
+    font-size: 1rem;
+  }
+
+  #contato .icons {
+    gap: 1rem;
+  }
+
+  #contato .icons a img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* TELAS MÉDIAS */
+@media (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+  }
+
+  #sobre-mim {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #sobre-mim picture img {
+    width: 250px;
+  }
+
+  #conhecimentos figure img {
+    width: 90px;
+  }
+
+  #contato {
+    width: 80%;
+    height: auto;
+    padding: 2rem;
+  }
+}
+
+/* TELAS GRANDES */
+@media (min-width: 1440px) {
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: clamp(4rem, 8vw, 7rem);
+  }
+
+  #sobre-mim article {
+    font-size: 1.1rem;
+  }
+
+  #conhecimentos figure img {
+    width: 120px;
+  }
+
+  #contato {
+    width: 60%;
+    height: 450px;
+  }
+}

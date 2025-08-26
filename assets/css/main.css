@@ -1,45 +1,59 @@
-/* ===========================
-   IMPORTS E VARIÁVEIS
-=========================== */
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lexend:wght@100..900&display=swap");
 
+/* ===========================
+   VARIÁVEIS
+=========================== */
 :root {
-  --color-bg: #907c65;
-  --color-bg2: #2f2519;
-  --color-bg-section: ;
-  --color-bg2-section: ;
+  --color-bg: #c5ac90;
+  --color-bg2: #1a130e;
   --color-font: #e8dfce;
   --color-link: #c9b18a;
-  --color-nav: #443b2f;
-  --color-nav-hover: #d6c5a3;
-  --color-footer: #352e24;
+  --color-link-hover: #d6c5a3;
+  --color-shadow: rgba(56, 42, 30, 0.4);
+  --color-about-bg: #9a8770;
+  --color-about-text: #382a1e;
+  --color-section-bg: #4d3f30;
+  --transition: 0.3s ease;
+  --radius: 12px;
+  --max-width: 1440px;
 }
 
 /* ===========================
-   RESET GERAL
+   RESET
 =========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Fjalla One, Sans Serif;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
   scroll-behavior: smooth;
 }
 
 body {
+  font-family: 'Fjalla One', 'Lexend', sans-serif;
   background: linear-gradient(to right, var(--color-bg), var(--color-bg2));
   color: var(--color-font);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body a {
-  color: var(--color-link);
+    color: var(--color-link);
 }
 
+/* ===========================
+   LAYOUT BASE
+=========================== */
 .limit-container {
-  max-width: 1440px;
+  max-width: var(--max-width);
   width: 100%;
   margin: 0 auto;
-  padding: 50px;
+  padding: 1rem;
 }
 
 /* ===========================
@@ -50,10 +64,10 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 25px 0;
-  background: rgba(101, 91, 74, 0.2);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem 0;
+  background: rgba(200, 181, 148, 0.2);
   backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
   display: flex;
   justify-content: center;
   z-index: 1000;
@@ -61,88 +75,212 @@ header {
 
 header nav {
   display: flex;
-  gap: 100px;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 header nav a {
   text-decoration: none;
-  color: var(--color-links);
-  transition: all 0.3s ease;
-  font-size: 1.2em;
+  color: var(--color-link);
+  font-size: 1.1rem;
+  transition: color var(--transition), transform var(--transition);
 }
 
-header nav a:hover {
-  color: var(--color-nav-hover);
-  transform: scale(1.1);
-}
-
-header nav a.active {
-  color: var(--color-nav-hover);
-  border-bottom: 2px solid var(--color-nav-hover);
+header nav a:hover,
+header nav a:focus {
+  color: var(--color-link-hover);
+  transform: scale(1.05);
 }
 
 /* ===========================
-   MAIN E SEÇÕES
+   TITULOS E PARÁGRAFOS PADRÃO
 =========================== */
-main {
-  display: flex;
-  flex-direction: column;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fjalla One', sans-serif;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--color-font);
 }
 
-main section {
-  height: 100vh;
+h1 { font-size: clamp(3rem, 10vw, 6rem); }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.8rem; }
+
+p {
+  font-family: 'Lexend', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--color-font);
+}
+
+/* ===========================
+   SEÇÕES
+=========================== */
+main>section:nth-of-type(1), main>section:nth-of-type(2), main>section:nth-of-type(3), main>section:nth-of-type(4) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+main>section:last-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  text-align: center;
+  min-height: 70vh;
+}
+
+/* ===========================
+   HERO / INÍCIO
+=========================== */
+#inicio .icons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+#inicio .icons a {
+  transition: transform var(--transition);
+}
+
+#inicio .icons a:hover,
+#inicio .icons a:focus {
+  transform: scale(1.2);
+}
+
+/* ===========================
+   SOBRE MIM
+=========================== */
+#sobre-mim {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#sobre-mim picture img {
+  width: min(100%, 300px);
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 0.375rem solid var(--color-link);
+  object-fit: cover;
+  box-shadow: 0 8px 25px var(--color-shadow);
+  transition: all 0.4s ease;
+}
+
+#sobre-mim picture img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px var(--color-shadow);
+  border-color: var(--color-link-hover);
+}
+
+#sobre-mim article {
+  background-color: var(--color-about-bg);
+  color: var(--color-about-text);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px var(--color-shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  width: 100%;
+  max-width: 800px;
+}
+
+#sobre-mim article:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* ===========================
+   CONHECIMENTOS
+=========================== */
+#conhecimentos figure {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#conhecimentos figure img {
+  width: 100px;
+  transition: transform var(--transition);
+}
+
+#conhecimentos figure img:hover {
+  transform: scale(1.1);
+}
+
+/* ===========================
+   PROJETOS
+=========================== */
+#projetos article {
+  background-color: var(--color-section-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 20px var(--color-shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  width: 80%;
+  max-width: 800px;
+}
+
+#projetos article:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* ===========================
+   CONTATO
+=========================== */
+#contato {
+  background-color: var(--color-section-bg);
+  width: 70%;
+  max-width: 900px;
+  height: 400px;
+  padding: 2rem;
+  border-radius: var(--radius);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  font-size: 20px;
+  box-shadow: 0 8px 30px var(--color-shadow);
+  margin: 4rem auto;
 }
 
-/* ===== INÍCIO (HERO) ===== */
-main section h1 {
-  font-size: 10rem;
+#contato p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
-main > section > div.icons {
+#contato .icons {
   display: flex;
-  flex-direction: row;
-  gap: 40px;
-  padding-top: 30px;
+  justify-content: center;
+  gap: 2rem;
 }
 
-/* ===== CONHECIMENTOS ===== */
-main > section:nth-child(3) figure > img {
-  width: 150px;
-  height: 150px;
+#contato .icons a img {
+  width: 50px;
+  height: 50px;
+  transition: transform var(--transition), filter var(--transition);
 }
 
-main > section:nth-child(3) figure {
-  display: flex;
-  flex-direction: row;
-  gap: 150px;
-}
-
-main > section:nth-child(3) h2 {
-  padding-bottom: 100px;
-}
-
-/* ===== SOBRE MIM ===== */
-main > section:nth-child(2) {
-  flex-direction: row;
-  gap: 150px;
-}
-
-main > section:nth-child(2) > picture > img {
-  border-radius: 15%;
-}
-
-main > section:nth-child(2) > article > h2 {
-  padding-bottom: 100px;
-}
-
-main > section:nth-child(2) > article > p {
-  padding-bottom: 15px;
+#contato .icons a img:hover {
+  transform: scale(1.02);
+  filter: brightness(1.02);
 }
 
 /* ===========================
@@ -150,7 +288,7 @@ main > section:nth-child(2) > article > p {
 =========================== */
 footer {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
 }

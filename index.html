@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thiago Soares</title>
     <link rel="stylesheet" href="assets/css/main.css" />
-    <script src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="assets/css/responsivity.css" />
+    <script src="assets/js/main.js" defer></script>
   </head>
   <body>
-    <div class="limit-container">
+    <div class="limit-container" id="inicio">
       <header>
         <nav>
-          <a href="#inicio">INICIO</a>
+          <a href="#inicio">INÍCIO</a>
           <a href="#sobre-mim">SOBRE MIM</a>
           <a href="#conhecimentos">CONHECIMENTOS</a>
           <a href="#projetos">PROJETOS</a>
@@ -20,131 +21,73 @@
       </header>
 
       <main>
-        <section id="inicio">
+        <!-- HERO -->
+        <section>
           <h1>THIAGO SOARES</h1>
           <p>Desenvolvedor Web</p>
           <div class="icons">
-            <a href="https://github.com/thigue"
-              ><img src="assets/img/github.png" alt="" /></a
-            ><a href="https://www.linkedin.com/in/thiago-soares-274bb2271/"
-              ><img src="assets/img/linkedin.png" alt="" /></a
-            ><a href="mailto:thigue.soares@gmail.com"
-              ><img src="assets/img/mail.png" alt=""
-            /></a>
+            <a href="https://github.com/thigue">
+              <img src="assets/img/github.png" alt="GitHub" />
+            </a>
+            <a href="https://www.linkedin.com/in/thiago-soares-274bb2271/">
+              <img src="assets/img/linkedin.png" alt="LinkedIn" />
+            </a>
+            <a href="mailto:thigue.soares@gmail.com">
+              <img src="assets/img/mail.png" alt="Email" />
+            </a>
           </div>
         </section>
 
+        <!-- SOBRE MIM -->
         <section id="sobre-mim">
           <picture>
-            <img
-              src="assets/img/thigue-profile.jpg"
-              alt="Foto de Thiago Soares"
-            />
+            <img src="assets/img/thigue-profile.jpg" alt="Foto de Thiago Soares" />
           </picture>
-
           <article>
-          <h2>Sobre mim</h2>
-          <p>
-            Sou Thiago Guerra Soares, entusiasta de tecnologia e desenvolvedor
-            web. Natural de Santos-SP, iniciei meu contato com a programação
-            explorando arduinos e projetos de robótica, experiência que
-            despertou minha paixão pela área.
-          </p>
-          <p>
-            Atualmente, curso graduação na FATEC Baixada Santista Rubens Lara,
-            onde venho ampliando meus conhecimentos e evoluindo constantemente
-            como profissional.
-          </p>
-          <p>
-            Além da programação, gosto de dedicar meu tempo a boas leituras e à
-            prática de esportes, que me ajudam a manter o equilíbrio e a
-            criatividade necessários para superar desafios — inclusive aqueles
-            bugs que parecem impossíveis.
-          </p>
-          <p>
-            Meu objetivo é continuar aprendendo e aprimorando minhas habilidades
-            para alcançar sempre a melhor versão de mim como desenvolvedor.
-          </p>
+            <h2>Sobre mim</h2>
+            <p>Sou Thiago Guerra Soares, entusiasta de tecnologia e desenvolvedor web. Natural de Santos-SP, iniciei meu contato com a programação explorando arduinos e projetos de robótica, experiência que despertou minha paixão pela área.</p>
+            <p>Atualmente, curso graduação na FATEC Baixada Santista Rubens Lara, onde venho ampliando meus conhecimentos e evoluindo constantemente como profissional.</p>
+            <p>Além da programação, gosto de dedicar meu tempo a boas leituras e à prática de esportes, que me ajudam a manter o equilíbrio e a criatividade necessários para superar desafios — inclusive aqueles bugs que parecem impossíveis.</p>
+            <p>Meu objetivo é continuar aprendendo e aprimorando minhas habilidades para alcançar sempre a melhor versão de mim como desenvolvedor.</p>
+          </article>
         </section>
 
+        <!-- CONHECIMENTOS -->
         <section id="conhecimentos">
           <h2>Conhecimentos</h2>
-
           <figure>
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-              alt="HTML"
-              title="HTML"
-            />
-
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-              alt="CSS"
-              title="CSS"
-            />
-
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-              alt="JavaScript"
-              title="JavaScript"
-            />
-
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-              alt="Java"
-              title="Java"
-            />
-
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
-              alt="SQL"
-              title="SQL"
-            />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" title="CSS" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL" title="SQL" />
           </figure>
         </section>
 
+        <!-- PROJETOS -->
         <section id="projetos">
           <h2>Projetos</h2>
           <article>
             <h3>To-do-list</h3>
             <p>O projeto consiste em uma lista para organização de afazeres</p>
             <p>Desenvolvido com: HTML, CSS e JavaScript</p>
-            <a href="#">to-do-list-project</a>
+            <p><strong>Status:</strong> EM ANDAMENTO</p>
+            <a href="#projetos" class="link-destaque">to-do-list-project</a>
           </article>
         </section>
 
+        <!-- CONTATO -->
         <section id="contato">
           <h2>Contato</h2>
-          <form action="#" method="post">
-            <label for="nome"></label>
-            <input
-              type="text"
-              id="nome"
-              name="nome"
-              placeholder="Seu nome"
-              required
-            />
-
-            <label for="email"></label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Seu email"
-              required
-            />
-
-            <label for="mensagem"></label>
-            <textarea
-              id="mensagem"
-              name="mensagem"
-              rows="4"
-              placeholder="Sua mensagem"
-              required
-            ></textarea>
-
-            <button type="submit">Enviar</button>
-          </form>
+          <p>Email: <a href="mailto:thigue.soares@gmail.com" class="link-destaque">thigue.soares@gmail.com</a></p>
+          <div class="icons">
+            <a href="https://github.com/thigue">
+              <img src="assets/img/github.png" alt="GitHub" />
+            </a>
+            <a href="https://www.linkedin.com/in/thiago-soares-274bb2271/">
+              <img src="assets/img/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
         </section>
       </main>
 
