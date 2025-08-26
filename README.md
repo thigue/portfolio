@@ -18,24 +18,8 @@ Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvid
 
 ---
 
-## Estrutura do Projeto  
-/portfolio
-│── index.html
-│── css/
-│ ├── main.css
-│ ├── responsivity.css
-│── js/
-│ ├── main.js
-│── img/
-├── github.png
-├── linkedin.png
-├── mail.png
-├── thigue-profile.jpg
-
----
-
 ## Acesso ao Portfólio  
-[Portfólio Online](https://thigue.github.io/portfolio)  
+[Portfólio Online](https://portfolio-mu-murex-19.vercel.app/)  
 
 ---
 
